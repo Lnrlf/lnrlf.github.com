@@ -1,5 +1,5 @@
 # Site settings
-title: 탄율
+title: Lnrlf
 url: "http://Lnrlf.github.io"    # the protocol and hostname of your site, eg. `http://laobubu.github.io`
 baseurl: "" # the prefix of your site uri, eg. `"/jekyll-theme-EasyBook"` or empty string `""`
 #timezone: Asia/Chongqing
@@ -8,7 +8,7 @@ description: >
 
 # Your information
 email: ljo030818@gmail.com
-author: Lnrlf
+author: 탄율
 avatar: "http://www.gameaz.co.kr/Files/Images/20180924/Screenshot20180924at16.45.192.jpg"
 profile: hi~ 제5인격유저라구 ㅇㅅㅇ!
 #twitter_username: twitter_username
