@@ -1,0 +1,22 @@
+import requests
+from bs4 import BeautifulSoup
+from flask import Flask, jsonify
+app = Flask(__name__)
+app.config['JSON_AS_ASCII'] = False
+
+@app.route("/")
+def hello():
+    response = requests.get('https://movie.naver.com/movie/sdb/rank/rmovie.nhn')
+    html = response.text
+    soup = BeautifulSoup(html, 'html.parser')
+    ranking = 1
+    data = dict()
+    for tag in soup.select('div[class=tit3]'):
+        data[ranking] = tag.text.strip()
+        ranking = ranking + 1
+    print(data)
+    header = jsonify(data)
+    return header
+
+if __name__ == "__main__":
+    app.run(host="127.0.0.1", port="8080")
