@@ -1,0 +1,23 @@
+import requests
+from bs4 import BeautifulSoup
+from flask import Flask, render_template
+app = Flask(__name__)
+
+@app.route('/')
+def subject():
+    response = requests.get('https://movie.naver.com/movie/sdb/rank/rmovie.nhn')
+    html = response.text
+    soup = BeautifulSoup(html, 'html.parser')
+    ranking = 1
+    # data = dict()
+    data=[]
+    for tag in soup.select('div[class=tit3]'):
+        # data[ranking] = tag.text.strip()
+        aa=[ranking, tag.text.strip()]
+        data.append(aa)
+        ranking = ranking + 1
+    print(aa)
+    return render_template('subjects.html2.html', values=data)
+
+if __name__ == "__main__":
+    app.run(host="127.0.0.1", port="8080")
