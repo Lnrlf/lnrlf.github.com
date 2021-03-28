@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table, th, td {
+  border: 1px solid black;
+}
+</style>
+</head>
+<body>
+
+<table style="width:100%">
+  <tr>
+    <th>순위</th>
+    <th>제목</th>
+  </tr>
+  {% for value in values %}
+  <tr>
+    <td>{{ value[0] }}</td>
+    <td>{{ value[1] }}</td>
+  </tr>
+  {% endfor %}
+
+</table>
+
+</body>
+</html>
