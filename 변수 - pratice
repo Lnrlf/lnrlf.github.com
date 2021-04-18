@@ -1,0 +1,49 @@
+# 1.변수란?
+
+a= 15 # 정수 15를 변수 a에 저장한다.
+b= 2 # 정수 2를 b에 저장한다.
+c = a+b # 변수 a와 b를 변수 c에 저장한다.
+print(a,b,c) # 최종적으로 변수 a,b,c를 출력한다. (print = 출력)
+
+# 2. 변수의 기본형
+# [ 정수는 양수,음수,0으로 구성된다 ]
+num1 = 5 # 양수
+num2 = 0
+num3 = -7 # 음수
+print(num1,num2,num3)
+
+# [ 실수는 소수점을 가진 숫자로 구성된다 ]
+buger = 18.88 # 양수도 가능
+phone = 75.0 # 0으로 떨어지는것도 ㄱㄴ!
+gamza = -4.555 # 음수도 ㄱㄴ
+game = 3.14 # 원주율값도 ㄱㄴ~
+print (buger, phone, gamza, game)
+
+# [ 불런은 참과 거짓중 하나의 값을 가진다 ]
+kimchiramen = True
+onlyrice = False
+print (kimchiramen, onlyrice)
+
+# [ 문자열은 하나 또는 여러개의 문자를 의미한다. 사용하려면 무조건 쌍따옴표 "" , 아니면 단따옴표 '' 를 해야한다 ]
+raman = "불닭볶음면"
+print(raman)
+
+table = '숫가락과 젓가락'
+print (table)
+
+gamingcomputer = "250만원"
+print (gamingcomputer)
+
+life = '시험공부'
+print (life)
+
+# 3.변수명
+# [ 다양하게 사용되는 변수를 보자 ]
+last_name = "이"
+first_name = '재원'
+print(last_name,first_name)
+
+age = 19
+thisYear = 2021
+day = 416
+print(thisYear,day,age)
