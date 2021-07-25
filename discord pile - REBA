@@ -1,0 +1,16 @@
+import discord
+from discord import Embed
+from discord.ext.commands import Bot
+
+intents=discord.Intents.default()
+client = Bot(command_prefix='!', intents=intents)
+
+@client.command()
+async def 가즈아(ctx):
+    embed=discord.Embed(title="죽창의 전설", url="https://www.youtube.com/watch?v=yNWj-eJrZ78", description="이것은 전설의 서막에 불가했다...", color=discord.Color.green())
+    embed.set_author(name="레바", url="https://www.youtube.com/channel/UCFqvKeEMGrJfJPEOafy1v4Q",
+                     icon_url="https://i.imgur.com/9rW7yG9.png")
+    embed.set_thumbnail(url="https://i.pinimg.com/474x/c9/28/4f/c9284f51a01904657b5d48e5fb92d3bb.jpg")
+    await ctx.send(embed=embed)
+
+client.run('ODUwOTMyNzI4ODczNDg0MzM4.YLw63A._giINGYnU3H7V5y7QW_hkH3ZIx0')
