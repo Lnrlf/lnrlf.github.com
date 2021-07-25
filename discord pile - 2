@@ -37,4 +37,4 @@ async def on_message(message):
             p=p+1
         await message.channel.send(embed=embed)
 
-client.run('ODUwOTMyNzI4ODczNDg0MzM4.YLw63A._giINGYnU3H7V5y7QW_hkH3ZIx0')
+client.run('Token')
