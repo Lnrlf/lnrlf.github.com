@@ -1,0 +1,40 @@
+import discord
+import asyncio
+from discord.ext import commands
+from discord.ext.commands import Bot
+b = [] # 급한일 저장소
+k = [] # 다음날 저장소
+c = 0 # 반복 돌기 위한 요소
+d = 0
+
+g = input ("얼마만큼 할것이 남았나요? : ")
+while int(g) > c:
+    a = input (" 급한일? y / n : ")
+    if a == 'y':
+        fast = input(" 할일 : ")
+        b.append (fast)
+        c=c+1
+    if a == 'n' :
+        lazy = input(" 내일 : ")
+        k.append (lazy)
+        c=c+1
+
+client = discord.Client()
+
+
+@client.event
+async def on_message(message):
+    o = 0
+    p = 0
+
+    if message.content.startswith('!subject'):
+        embed = discord.Embed(title="Subject",description="오늘 해야될 일은...?", color=0x00aaaa)
+        while o < len(b):
+            embed.add_field(name="hurry!!:snowboarder:", value=b[o], inline=False)
+            o=o+1
+        while p < len(k):
+            embed.add_field(name="No hurry;:maple_leaf:", value=k[p], inline=False)
+            p=p+1
+        await message.channel.send(embed=embed)
+
+client.run('ODUwOTMyNzI4ODczNDg0MzM4.YLw63A._giINGYnU3H7V5y7QW_hkH3ZIx0')
