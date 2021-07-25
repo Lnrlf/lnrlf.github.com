@@ -73,4 +73,4 @@ async def on_socket_response(payload: dict):
             }},
         )
 
-bot.run('')
+bot.run('Token')
